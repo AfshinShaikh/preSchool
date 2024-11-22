@@ -12,6 +12,7 @@ if (isset($_POST['login'])) {
 
     if ($user && password_verify($password, $user['password'])) {
         $_SESSION['username'] = $user['username'];
+        $_SESSION['id']=$user['id'];
         header('Location: home.php'); // Redirect to home.php on successful login
         exit();
     } else {

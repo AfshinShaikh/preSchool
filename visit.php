@@ -46,6 +46,27 @@ echo "<script>alert('Something went wrong. Please try again.');</script>";
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const visitTimeInput = document.getElementById("visittime");
+
+            // Set the minimum date and time to today
+            const today = new Date();
+            const minDateTime = today.toISOString().slice(0, 16); // Format as "YYYY-MM-DDTHH:mm"
+            visitTimeInput.setAttribute("min", minDateTime);
+
+            // Prevent Sundays
+            visitTimeInput.addEventListener("change", function () {
+                const selectedDate = new Date(this.value);
+                const dayOfWeek = selectedDate.getDay();
+
+                if (dayOfWeek === 0) { // Sunday is 0
+                    alert("Sundays are not allowed. Please choose another day.");
+                    this.value = ""; // Reset the input
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>

@@ -22,6 +22,7 @@
                     <a href="about.php" class="nav-item nav-link">About Us</a>
                     <a href="classes.php" class="nav-item nav-link">Classes</a>
                     <a href="contact.php" class="nav-item nav-link">Contact Us</a>
+                    <a href="status.php" class="nav-item nav-link">Status</a>
                     <a href="admin" class="nav-item nav-link">Admin</a>
                 </div>
    <a href="visit.php" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Schedule a Visit<i class="fa fa-arrow-right ms-3"></i></a>

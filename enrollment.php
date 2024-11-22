@@ -1,4 +1,5 @@
 <?php include_once('includes/config.php');
+session_start();
  if(isset($_POST['submit'])){
 $fname=$_POST['fathername'];
 $mname=$_POST['mothername'];
@@ -9,12 +10,12 @@ $agegroup=$_POST['agegroup'];
 $erollprogram=$_POST['erollprogram'];
 $message=$_POST['message'];
 $enrollno=mt_rand(100000000,999999999);
+$userid=$_SESSION['id'];
 
-
-$query=mysqli_query($con,"insert into tblenrollment(enrollmentNumber,fatherName,motherName,parentmobNo,parentEmail,childName,childAge,enrollProgram,message) values('$enrollno','$fname','$mname','$pmobno','$pemail','$cname','$agegroup','$erollprogram','$message')");
+$query=mysqli_query($con,"insert into tblenrollment(enrollmentNumber,fatherName,motherName,parentmobNo,parentEmail,childName,childAge,enrollProgram,message ,userid) values('$enrollno','$fname','$mname','$pmobno','$pemail','$cname','$agegroup','$erollprogram','$message' , '$userid')");
 if($query){
 echo "<script>alert('Enrollment Details sent successfully.');</script>";
-echo "<script type='text/javascript'> document.location = 'index.php'; </script>";
+echo "<script type='text/javascript'> document.location = 'home.php'; </script>";
 } else {
 echo "<script>alert('Something went wrong. Please try again.');</script>";
 }
