@@ -19,6 +19,7 @@ if (isset($_POST['signup'])) {
 <html>
 <head>
     <title>Sign Up</title>
+<link rel="stylesheet" href="index.css">
 </head>
 <body>
     <h2>Sign Up</h2>

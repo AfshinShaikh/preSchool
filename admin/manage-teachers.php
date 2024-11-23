@@ -121,16 +121,7 @@ while($result=mysqli_fetch_array($query)){
              
                   </tbody>
                   <tfoot>
-                  <tr>
-                    <th>#</th>
-                    <th>Profile Pic</th>
-                    <th>Full Name</th>
-                    <th>Email ID</th>
-                    <th>Mobile Number</th>
-                    <th>Subject</th>
-                    <th>Reg. Date</th>
-                    <th>Action</th>
-                  </tr>
+             
                   </tfoot>
                 </table>
               </div>
@@ -180,21 +171,7 @@ while($result=mysqli_fetch_array($query)){
 <script src="../dist/js/demo.js"></script>
 <!-- Page specific script -->
 <script>
-  $(function () {
-    $("#example1").DataTable({
-      "responsive": true, "lengthChange": false, "autoWidth": false,
-      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    });
-  });
+
 </script>
 </body>
 </html>
