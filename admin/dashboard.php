@@ -74,28 +74,8 @@ else{ ?>
         <!-- Small boxes (Stat box) -->
         <div class="row">
 
-          <?php if($_SESSION['utype']==1):?>
-          <div class="col-lg-4 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-<?php $query=mysqli_query($con,"select id from tbladmin where UserType=0");
-$subadmincount=mysqli_num_rows($query);
-?>
-
-
-                <h3><?php echo $subadmincount;?></h3>
-                <p>Sub Admins</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-person"></i>
-              </div>
-              <a href="manage-subadmins.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-        <?php endif;?>
           <!-- ./col -->
-          <div class="col-lg-4 col-6">
+          <div class="col-lg-6 col-6">
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
@@ -114,7 +94,7 @@ $listedteachers=mysqli_num_rows($query1);
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-4 col-6">
+          <div class="col-lg-6 col-6">
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">

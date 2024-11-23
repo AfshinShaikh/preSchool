@@ -34,7 +34,7 @@
 <?php if($_SESSION['utype']==1):?>
 
 <!--Subadmins--->
-     <li class="nav-item">
+<!--      <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
@@ -58,7 +58,7 @@
               </li>
 
             </ul>
-          </li>
+          </li> -->
 <?php endif;?>
 
 
@@ -255,7 +255,7 @@
               </li>
 
                <li class="nav-item">
-                <a href="logout.php" class="nav-link">
+                <a href="../login.php" class="nav-link">
   <i class="fas fa-sign-out-alt nav-icon"></i>
                   <p>Logout</p>
                 </a>
